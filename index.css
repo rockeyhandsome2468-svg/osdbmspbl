@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #f0f7ff;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(213,100%,90%,1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(189,100%,88%,0.8) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(213,100%,90%,1) 0, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(210,100%,92%,1) 0, transparent 50%),
+      radial-gradient(at 0% 100%, hsla(189,100%,89%,0.8) 0, transparent 50%);
+    background-attachment: fixed;
+    @apply text-slate-800 font-sans antialiased min-h-screen selection:bg-brand-teal selection:text-brand-navy;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-navy text-white px-5 py-2.5 rounded-lg shadow-md hover:bg-[#0f3b61] hover:shadow-lg transition-all font-medium disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-brand-teal text-brand-navy font-bold px-5 py-2.5 rounded-lg shadow hover:bg-[#00b5d9] hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-danger {
+    @apply bg-red-50 text-red-600 font-bold px-5 py-2.5 rounded-lg shadow-sm border border-red-200 hover:bg-red-100 transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-success {
+    @apply bg-green-50 text-green-700 font-bold px-5 py-2.5 rounded-lg shadow-sm border border-green-200 hover:bg-green-100 transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .input-field {
+    @apply w-full bg-white/80 backdrop-blur-sm border border-slate-300 text-slate-800 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-transparent transition-all placeholder-slate-400;
+  }
+  .card {
+    @apply bg-white/80 backdrop-blur-xl rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white p-6 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:bg-white/90 transition-all duration-300;
+  }
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-xl border border-white shadow-[0_8px_30px_rgb(0,0,0,0.06)];
+  }
+}
